@@ -25,6 +25,10 @@ namespace Arq.Spotify.Infra.EntityMappers.UserMapers
             {
                 f.Property(x => x.Value).HasColumnName("Password");
             });
+            builder.OwnsOne(p => p.Cpf, f =>
+            {
+                f.Property(x => x.Value).HasColumnName("Cpf");
+            });
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Arq.Spotify.Infra.EntityMappers.SpotifyMapping
             builder.Property(x => x.Name).IsRequired().HasMaxLength(150);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(500);
             builder.Property(x => x.Backdrop).IsRequired().HasMaxLength(1024);
+            builder.Property(x => x.ReleaseDate).IsRequired();
 
             builder.OwnsOne(p => p.Band, f =>
             {
