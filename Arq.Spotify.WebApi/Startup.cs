@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Arq.Spotify.Application;
 using Arq.Spotify.Domain.Contracts.Repositories;
 using Arq.Spotify.Infra.Context;
 using Arq.Spotify.Infra.Repositories;
@@ -40,7 +41,7 @@ namespace Arq.Spotify.WebApi
         {
             services.AddControllers();
 
-            services.RegisterRepository(Configuration.GetConnectionString("SpotifyDB"));
+            services.RegisterApplication(Configuration.GetConnectionString("SpotifyDB"));
 
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(opt =>

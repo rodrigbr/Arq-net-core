@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,12 +6,21 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arq.Spotify.Domain\Arq.Spotify.Domain.csproj" />
-    <ProjectReference Include="..\Arq.Spotify.Framework\Arq.Spotify.Framework.csproj" />
+    <ProjectReference Include="..\Arq.Spotify.Infra\Arq.Spotify.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Implementations\" />
+    <Folder Include="Contracts\User\" />
+    <Folder Include="DTOs\User\" />
+    <Folder Include="Implementations\User\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

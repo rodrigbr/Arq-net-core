@@ -9,6 +9,6 @@ namespace Arq.Spotify.Domain.Contracts.Repositories.Spotify
 {
     public interface IAlbumRepository : IRepositoryBase<Album>
     {
-
+        Task<IEnumerable<Album>> getAllAlbum();
     }
 }

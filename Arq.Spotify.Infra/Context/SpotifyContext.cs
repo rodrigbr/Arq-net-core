@@ -26,6 +26,7 @@ namespace Arq.Spotify.Infra.Context
             ILoggerFactory loggerFactory = LoggerFactory.Create(x => x.AddConsole());
             optionsBuilder.UseLoggerFactory(loggerFactory);
 
+            //optionsBuilder.UseLazyLoadingProxies();
             base.OnConfiguring(optionsBuilder);
         }
 

@@ -13,8 +13,4 @@
     <PackageReference Include="FluentValidation" Version="11.1.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Arq.Spotify.Framework\Arq.Spotify.Framework.csproj" />
-  </ItemGroup>
-
 </Project>

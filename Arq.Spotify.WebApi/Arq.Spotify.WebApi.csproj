@@ -18,8 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arq.Spotify.Application\Arq.Spotify.Application.csproj" />
-    <ProjectReference Include="..\Arq.Spotify.Domain\Arq.Spotify.Domain.csproj" />
-    <ProjectReference Include="..\Arq.Spotify.Framework\Arq.Spotify.Framework.csproj" />
     <ProjectReference Include="..\Arq.Spotify.Infra\Arq.Spotify.Infra.csproj" />
   </ItemGroup>
 
