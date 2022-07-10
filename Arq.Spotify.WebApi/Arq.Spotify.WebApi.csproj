@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
@@ -20,10 +21,6 @@
     <ProjectReference Include="..\Arq.Spotify.Domain\Arq.Spotify.Domain.csproj" />
     <ProjectReference Include="..\Arq.Spotify.Framework\Arq.Spotify.Framework.csproj" />
     <ProjectReference Include="..\Arq.Spotify.Infra\Arq.Spotify.Infra.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

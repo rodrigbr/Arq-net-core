@@ -11,8 +11,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Arq.Spotify.Domain.Contracts.Repositories;
 using Arq.Spotify.Infra.Context;
+using Arq.Spotify.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Arq.Spotify.Infra.Repositories.Spotify;
+using Arq.Spotify.Domain.Contracts.Repositories.Spotify;
+using Arq.Spotify.Domain.Contracts.Repositories.User;
+using Arq.Spotify.Infra.Configuration;
+using Arq.Spotify.Infra.Repositories.User;
+using IdentityModel;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace Arq.Spotify.WebApi
 {
@@ -29,7 +39,16 @@ namespace Arq.Spotify.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<SpotifyContext>(c => c.UseSqlServer(Configuration.GetConnectionString("SpotifyDB")));
+
+            services.RegisterRepository(Configuration.GetConnectionString("SpotifyDB"));
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(opt =>
+                {
+                    opt.Authority = "https://localhost:44317/";
+                    opt.ApiName = "SpotifyLite";
+                    opt.ApiSecret = "SuperSenhaDificil".ToSha256();
+                });
 
             services.AddSwaggerGen(c =>
             {
@@ -51,6 +70,7 @@ namespace Arq.Spotify.WebApi
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

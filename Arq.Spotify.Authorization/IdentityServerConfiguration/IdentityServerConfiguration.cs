@@ -20,7 +20,7 @@ namespace Arq.Spotify.Authorization.IdentityServerConfiguration
         {
             return new List<ApiResource>()
             {
-                new ApiResource("Spotify Lite", "Infnet Arquitetura", new string[] { "user", "admin" })
+                new ApiResource("SpotifyLite", "Infnet Arquitetura", new string[] { "user", "admin" })
                 {
                     ApiSecrets =
                     {
@@ -55,7 +55,7 @@ namespace Arq.Spotify.Authorization.IdentityServerConfiguration
                 {
                     ClientId = "f19c4442-48e7-4d56-ad1e-bb5ae56122e4",
                     ClientName = "Spotify Service Token",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets = {new Secret("SpotifySecret".Sha256())},
                     AllowedScopes =
                     {

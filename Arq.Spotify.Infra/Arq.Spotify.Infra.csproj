@@ -20,8 +20,4 @@
     <ProjectReference Include="..\Arq.Spotify.Framework\Arq.Spotify.Framework.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

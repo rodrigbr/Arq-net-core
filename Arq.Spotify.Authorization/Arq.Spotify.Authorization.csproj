@@ -13,4 +13,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Arq.Spotify.Domain\Arq.Spotify.Domain.csproj" />
+    <ProjectReference Include="..\Arq.Spotify.Infra\Arq.Spotify.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -13,6 +13,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Arq.Spotify.Authorization.GrantTypeValidator;
 using Arq.Spotify.Authorization.ProfileService;
+using Arq.Spotify.Domain.Contracts.Repositories;
+using Arq.Spotify.Domain.Contracts.Repositories.Spotify;
+using Arq.Spotify.Domain.Contracts.Repositories.User;
+using Arq.Spotify.Infra.Configuration;
+using Arq.Spotify.Infra.Context;
+using Arq.Spotify.Infra.Repositories;
+using Arq.Spotify.Infra.Repositories.Spotify;
+using Arq.Spotify.Infra.Repositories.User;
+using Microsoft.EntityFrameworkCore;
 
 namespace Arq.Spotify.Authorization
 {
@@ -28,6 +37,9 @@ namespace Arq.Spotify.Authorization
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.RegisterRepository(Configuration.GetConnectionString("SpotifyDB"));
+
             services.AddIdentityServer()
                 .AddInMemoryIdentityResources(IdentityServerConfiguration.IdentityServerConfiguration.GetIdentityResources())
                 .AddInMemoryApiScopes(IdentityServerConfiguration.IdentityServerConfiguration.GetApiScopes())
