@@ -13,9 +13,9 @@ namespace Arq.Spotify.Domain.ValueObjects.Music
 
         }
 
-        public Duration(decimal valor)
+        public Duration(decimal value)
         {
-            Value = valor;
+            Value = value;
         }
 
         public decimal Value { get; set; }
@@ -24,10 +24,10 @@ namespace Arq.Spotify.Domain.ValueObjects.Music
 
         private string Format(decimal value)
         {
-            var hours = Math.Floor(Value / 3600);
-            var duration = Value % 3600;
+            var hours = Math.Floor(value / 3600);
+            var duration = value % 3600;
 
-            var minutes = Math.Floor(Value / 60);
+            var minutes = Math.Floor(value / 60);
             var seconds = duration % 60;
 
             if (hours > 0)
@@ -38,7 +38,6 @@ namespace Arq.Spotify.Domain.ValueObjects.Music
             return $"{minutes.ToString().PadLeft(2, '0')} Min {seconds.ToString().PadLeft(2, '0')} Seg";
 
         }
-
         public override string ToString()
         {
             return FormatValue;

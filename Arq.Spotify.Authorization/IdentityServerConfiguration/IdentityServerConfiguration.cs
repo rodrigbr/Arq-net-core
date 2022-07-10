@@ -28,7 +28,7 @@ namespace Arq.Spotify.Authorization.IdentityServerConfiguration
                     },
                     Scopes =
                     {
-                        "SpotifyLite-API"
+                        "SpotifyAPI"
                     }
                 }
             };
@@ -42,7 +42,7 @@ namespace Arq.Spotify.Authorization.IdentityServerConfiguration
                 {
                     Name = "SpotifyAPI",
                     Description = "Scope for API Spotify",
-                    UserClaims = {"spotify-user", "spotify-admin"}
+                    UserClaims = { "user", "admin" }
                 }
             };
         }

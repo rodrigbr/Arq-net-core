@@ -33,7 +33,7 @@ namespace Arq.Spotify.Application.Implementations.Spotify
 
         public async Task<List<AlbumOutputDTO>> GetAll()
         {
-            return this._mapper.Map<List<AlbumOutputDTO>>(await _albumRepository.GetAll());
+            return this._mapper.Map<List<AlbumOutputDTO>>(await _albumRepository.getAllAlbum());
         }
     }
 }

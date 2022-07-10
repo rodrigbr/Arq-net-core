@@ -10,12 +10,11 @@ namespace Arq.Spotify.Application.DTOs.Spotify.Profile
             CreateMap<Album, AlbumOutputDTO>()
                 .ForMember(x => x.Band, f => f.MapFrom(m => m.Band.Name));
             CreateMap<AlbumInputDTO, Album>()
-                .ForMember(x => x.Band.Name, f => f.MapFrom(m => m.Band));
+                .ForPath(x => x.Band.Name, f => f.MapFrom(m => m.Band));
             CreateMap<Music, MusicOutputDTO>()
                 .ForMember(x => x.Duration, f => f.MapFrom(m => m.Duration.FormatValue));
             CreateMap<MusicInputDTO, Music>()
-                .ForMember(x => x.Duration.Value, f => f.MapFrom(m => m.Duration));
-
+                .ForPath(x => x.Duration.Value, f => f.MapFrom(m => m.Duration));
         }
     }
 }
