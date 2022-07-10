@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Arq.Spotify.Infra.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Arq.Spotify.WebApi
 {
@@ -27,6 +29,8 @@ namespace Arq.Spotify.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<SpotifyContext>(c => c.UseSqlServer(Configuration.GetConnectionString("SpotifyDB")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Arq.Spotify.WebApi", Version = "v1" });
