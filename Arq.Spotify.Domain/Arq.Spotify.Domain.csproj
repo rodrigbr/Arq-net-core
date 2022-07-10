@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CommandHandlers\" />
-    <Folder Include="Commands\" />
     <Folder Include="Contracts\" />
-    <Folder Include="Entities\" />
     <Folder Include="Statics\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>
