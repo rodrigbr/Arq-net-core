@@ -9,6 +9,15 @@ Psw: 123123
 
 Após recuperar o token válido, adicionar como Bearer no Postman para utilizar os endpoints da API (https://spotify-api-server.azurewebsites.net/swagger)
 
+#Arquitetura utilizada:
+• .NET 5
+• DDD
+• CQRS
+• Entity Framework Core
+• DevOps GitHub
+• Azure Web Apps
+• Azure SQL Server
+
 #Diagrama de interfaces
 
 ![image](https://user-images.githubusercontent.com/10901140/178180730-f1a505a0-b9af-4df3-85b9-a34c96642247.png)
