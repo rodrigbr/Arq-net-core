@@ -11,7 +11,7 @@ namespace Arq.Spotify.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Policy = "user-policy")]
     public class AlbumController : ControllerBase
     {
         public IMediator Handler { get; set; }

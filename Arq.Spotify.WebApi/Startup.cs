@@ -51,6 +51,14 @@ namespace Arq.Spotify.WebApi
                     opt.ApiSecret = "SuperSenhaDificil";
                 });
 
+            services.AddAuthorization(options =>
+            {
+               options.AddPolicy("user-policy", p =>
+               {
+                   p.RequireClaim("role", "spotify-user");
+               });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Arq.Spotify.WebApi", Version = "v1" });
