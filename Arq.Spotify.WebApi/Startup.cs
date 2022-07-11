@@ -46,7 +46,7 @@ namespace Arq.Spotify.WebApi
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(opt =>
                 {
-                    opt.Authority = "https://localhost:44317/";
+                    opt.Authority = "https://spotify-identity-server.azurewebsites.net/";
                     opt.ApiName = "SpotifyLite";
                     opt.ApiSecret = "SuperSenhaDificil";
                 });

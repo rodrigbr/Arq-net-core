@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Arq.Spotify.Domain.Entities.Spotify.Album">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAoAAAAAAAAAAQAAAAAAAAAAAAIAAAAgAA=</HashCode>
+      <FileName>Entities\Spotify\Album.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arq.Spotify.Domain.Entities.Spotify.Music">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Spotify\Music.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Arq.Spotify.Domain.Entities.User.User">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAACCAACAAAAAAAAQAAAAQAAACAAAAAACAAAA=</HashCode>
+      <FileName>Entities\User\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arq.Spotify.Domain.Entities.User.UserFavoriteMusic">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\User\UserFavoriteMusic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arq.Spotify.Domain.ValueObjects.Music.Band">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\Music\Band.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arq.Spotify.Domain.ValueObjects.Music.Duration">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAEgAAAAAAA=</HashCode>
+      <FileName>ValueObjects\Music\Duration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Arq.Spotify.Domain.Contracts.Repositories.Spotify.IAlbumRepository">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repositories\Spotify\IAlbumRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Arq.Spotify.Domain.Contracts.Repositories.IRepositoryBase&lt;TEntity&gt;">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAgAIAIgAAAAAAAIA=</HashCode>
+      <FileName>Contracts\Repositories\IRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Arq.Spotify.Domain.Contracts.Repositories.Spotify.IMusicRepository">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repositories\Spotify\IMusicRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Arq.Spotify.Domain.Contracts.Repositories.User.IUserFavoriteMusicRepository">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repositories\User\IUserFavoriteMusicRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Arq.Spotify.Domain.Contracts.Repositories.User.IUserRepository">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Repositories\User\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

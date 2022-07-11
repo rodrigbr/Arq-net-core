@@ -26,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arq.Spotify.WebApi", "Arq.S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Authorization", "5-Authorization", "{7458F435-20CD-4021-8376-3C1D413EFDED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arq.Spotify.Authorization", "Arq.Spotify.Authorization\Arq.Spotify.Authorization.csproj", "{4AF91B0F-CA39-44AC-BD9B-251336102885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arq.Spotify.Authorization", "Arq.Spotify.Authorization\Arq.Spotify.Authorization.csproj", "{4AF91B0F-CA39-44AC-BD9B-251336102885}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
