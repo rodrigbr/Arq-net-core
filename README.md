@@ -1,5 +1,5 @@
 # Arq-net-core
-Projeto de bloco que reproduz uma pequena API Spotify. Autenticado por um IdentityServer.
+POC de uma pequena API Spotify. Autenticado por um IdentityServer.
 Para utilização, inicialmente é necessário realizar a autenticação com as credenciais abaixo no IdentityServer (https://spotify-identity-server.azurewebsites.net/)
 
 Usuário default:
